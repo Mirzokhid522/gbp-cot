@@ -1,0 +1,481 @@
+{
+    "GBP": [
+        {
+            "close": 1.341,
+            "color": "Purple",
+            "date": "Sep 23, 25",
+            "high": 1.3529,
+            "index": 0,
+            "low": 1.3326,
+            "open": 1.347
+        },
+        {
+            "close": 1.3481,
+            "color": "Cyan",
+            "date": "Sep 30, 25",
+            "high": 1.3527,
+            "index": 1,
+            "low": 1.3419,
+            "open": 1.3422
+        },
+        {
+            "close": 1.3282,
+            "color": "Purple",
+            "date": "Oct 07, 25",
+            "high": 1.3483,
+            "index": 2,
+            "low": 1.3272,
+            "open": 1.3441
+        },
+        {
+            "close": 1.3435,
+            "color": "Cyan",
+            "date": "Oct 14, 25",
+            "high": 1.347,
+            "index": 3,
+            "low": 1.3252,
+            "open": 1.3347
+        },
+        {
+            "close": 1.3304,
+            "color": "Purple",
+            "date": "Oct 21, 25",
+            "high": 1.3443,
+            "index": 4,
+            "low": 1.3297,
+            "open": 1.3428
+        },
+        {
+            "close": 1.314,
+            "color": "Purple",
+            "date": "Oct 28, 25",
+            "high": 1.3356,
+            "index": 5,
+            "low": 1.3101,
+            "open": 1.3325
+        },
+        {
+            "close": 1.3157,
+            "color": "Cyan",
+            "date": "Nov 04, 25",
+            "high": 1.3175,
+            "index": 6,
+            "low": 1.301,
+            "open": 1.3134
+        },
+        {
+            "close": 1.3164,
+            "color": "Cyan",
+            "date": "Nov 11, 25",
+            "high": 1.3213,
+            "index": 7,
+            "low": 1.3086,
+            "open": 1.3148
+        },
+        {
+            "close": 1.3102,
+            "color": "Purple",
+            "date": "Nov 18, 25",
+            "high": 1.3187,
+            "index": 8,
+            "low": 1.3037,
+            "open": 1.3153
+        },
+        {
+            "close": 1.3235,
+            "color": "Cyan",
+            "date": "Nov 25, 25",
+            "high": 1.327,
+            "index": 9,
+            "low": 1.3079,
+            "open": 1.3099
+        },
+        {
+            "close": 1.3334,
+            "color": "Cyan",
+            "date": "Dec 02, 25",
+            "high": 1.3385,
+            "index": 10,
+            "low": 1.3179,
+            "open": 1.3236
+        },
+        {
+            "close": 1.3366,
+            "color": "Cyan",
+            "date": "Dec 09, 25",
+            "high": 1.3438,
+            "index": 11,
+            "low": 1.3287,
+            "open": 1.3335
+        },
+        {
+            "close": 1.3391,
+            "color": "Cyan",
+            "date": "Dec 16, 25",
+            "high": 1.3446,
+            "index": 12,
+            "low": 1.3312,
+            "open": 1.3368
+        },
+        {
+            "close": 1.3501,
+            "color": "Cyan",
+            "date": "Dec 23, 25",
+            "high": 1.3524,
+            "index": 13,
+            "low": 1.3381,
+            "open": 1.3381
+        },
+        {
+            "close": 1.3454,
+            "color": "Purple",
+            "date": "Dec 30, 25",
+            "high": 1.3525,
+            "index": 14,
+            "low": 1.3404,
+            "open": 1.3506
+        },
+        {
+            "close": 1.3407,
+            "color": "Purple",
+            "date": "Jan 06, 26",
+            "high": 1.3567,
+            "index": 15,
+            "low": 1.3405,
+            "open": 1.3444
+        },
+        {
+            "close": 1.3402,
+            "color": "Purple",
+            "date": "Jan 13, 26",
+            "high": 1.3488,
+            "index": 16,
+            "low": 1.3374,
+            "open": 1.3434
+        },
+        {
+            "close": 1.3624,
+            "color": "Cyan",
+            "date": "Jan 20, 26",
+            "high": 1.3642,
+            "index": 17,
+            "low": 1.3399,
+            "open": 1.3399
+        },
+        {
+            "close": 1.3698,
+            "color": "Cyan",
+            "date": "Jan 27, 26",
+            "high": 1.3857,
+            "index": 18,
+            "low": 1.3647,
+            "open": 1.365
+        },
+        {
+            "close": 1.3616,
+            "color": "Purple",
+            "date": "Feb 03, 26",
+            "high": 1.3719,
+            "index": 19,
+            "low": 1.3524,
+            "open": 1.369
+        },
+        {
+            "close": 1.3642,
+            "color": "Cyan",
+            "date": "Feb 10, 26",
+            "high": 1.3696,
+            "index": 20,
+            "low": 1.359,
+            "open": 1.359
+        },
+        {
+            "close": 1.3485,
+            "color": "Purple",
+            "date": "Feb 17, 26",
+            "high": 1.3662,
+            "index": 21,
+            "low": 1.3434,
+            "open": 1.3652
+        },
+        {
+            "close": 1.348,
+            "color": "Purple",
+            "date": "Feb 24, 26",
+            "high": 1.3575,
+            "index": 22,
+            "low": 1.3439,
+            "open": 1.3491
+        },
+        {
+            "close": 1.3387,
+            "color": "Purple",
+            "date": "Mar 03, 26",
+            "high": 1.3456,
+            "index": 23,
+            "low": 1.3253,
+            "open": 1.3413
+        },
+        {
+            "close": 1.3242,
+            "color": "Purple",
+            "date": "Mar 10, 26",
+            "high": 1.3484,
+            "index": 24,
+            "low": 1.322,
+            "open": 1.3349
+        },
+        {
+            "close": 1.3326,
+            "color": "Cyan",
+            "date": "Mar 17, 26",
+            "high": 1.3455,
+            "index": 25,
+            "low": 1.3231,
+            "open": 1.3232
+        },
+        {
+            "close": 1.327,
+            "color": "Purple",
+            "date": "Mar 24, 26",
+            "high": 1.347,
+            "index": 26,
+            "low": 1.3261,
+            "open": 1.3314
+        },
+        {
+            "close": 1.3203,
+            "color": "Purple",
+            "date": "Mar 31, 26",
+            "high": 1.3334,
+            "index": 27,
+            "low": 1.3174,
+            "open": 1.325
+        },
+        {
+            "close": 1.3469,
+            "color": "Cyan",
+            "date": "Apr 07, 26",
+            "high": 1.348,
+            "index": 28,
+            "low": 1.318,
+            "open": 1.318
+        },
+        {
+            "close": 1.3536,
+            "color": "Cyan",
+            "date": "Apr 14, 26",
+            "high": 1.3589,
+            "index": 29,
+            "low": 1.3401,
+            "open": 1.3401
+        },
+        {
+            "close": 1.3528,
+            "color": "Cyan",
+            "date": "Apr 21, 26",
+            "high": 1.3538,
+            "index": 30,
+            "low": 1.3447,
+            "open": 1.35
+        },
+        {
+            "close": 1.3582,
+            "color": "Cyan",
+            "date": "Apr 28, 26",
+            "high": 1.3657,
+            "index": 31,
+            "low": 1.3466,
+            "open": 1.3515
+        },
+        {
+            "close": 1.3622,
+            "color": "Cyan",
+            "date": "May 05, 26",
+            "high": 1.3633,
+            "index": 32,
+            "low": 1.3533,
+            "open": 1.3585
+        },
+        {
+            "close": 1.3321,
+            "color": "Purple",
+            "date": "May 12, 26",
+            "high": 1.3653,
+            "index": 33,
+            "low": 1.3321,
+            "open": 1.3578
+        },
+        {
+            "close": 1.3447,
+            "color": "Cyan",
+            "date": "May 19, 26",
+            "high": 1.3463,
+            "index": 34,
+            "low": 1.3323,
+            "open": 1.3323
+        },
+        {
+            "close": 1.3461,
+            "color": "Cyan",
+            "date": "May 26, 26",
+            "high": 1.3509,
+            "index": 35,
+            "low": 1.3367,
+            "open": 1.3449
+        },
+        {
+            "close": 1.3336,
+            "color": "Purple",
+            "date": "Jun 02, 26",
+            "high": 1.3484,
+            "index": 36,
+            "low": 1.333,
+            "open": 1.345
+        },
+        {
+            "close": 1.3415,
+            "color": "Cyan",
+            "date": "Jun 09, 26",
+            "high": 1.3433,
+            "index": 37,
+            "low": 1.3306,
+            "open": 1.333
+        },
+        {
+            "close": 1.3233,
+            "color": "Purple",
+            "date": "Jun 16, 26",
+            "high": 1.3457,
+            "index": 38,
+            "low": 1.3182,
+            "open": 1.3439
+        },
+        {
+            "close": 1.32,
+            "color": "Purple",
+            "date": "Jun 23, 26",
+            "high": 1.3271,
+            "index": 39,
+            "low": 1.3144,
+            "open": 1.3206
+        },
+        {
+            "close": 1.3356,
+            "color": "Cyan",
+            "date": "Jun 30, 26",
+            "high": 1.3382,
+            "index": 40,
+            "low": 1.3197,
+            "open": 1.3198
+        },
+        {
+            "close": 1.3399,
+            "color": "Cyan",
+            "date": "Jul 07, 26",
+            "high": 1.345,
+            "index": 41,
+            "low": 1.3331,
+            "open": 1.3353
+        },
+        {
+            "close": 1.3455,
+            "color": "Cyan",
+            "date": "Jul 14, 26",
+            "high": 1.3555,
+            "index": 42,
+            "low": 1.3347,
+            "open": 1.3379
+        },
+        {
+            "close": 1.3325,
+            "color": "Purple",
+            "date": "Jul 21, 26",
+            "high": 1.3466,
+            "index": 43,
+            "low": 1.33,
+            "open": 1.3442
+        },
+        {
+            "close": 1.3482,
+            "color": "Cyan",
+            "date": "Jul 28, 26",
+            "high": 1.3489,
+            "index": 44,
+            "low": 1.3281,
+            "open": 1.3357
+        },
+        {
+            "close": 1.35,
+            "color": "Cyan",
+            "date": "Aug 04, 26",
+            "high": 1.3508,
+            "index": 45,
+            "low": 1.342,
+            "open": 1.3492
+        },
+        {
+            "close": 1.3534,
+            "color": "Cyan",
+            "date": "Aug 11, 26",
+            "high": 1.3555,
+            "index": 46,
+            "low": 1.3484,
+            "open": 1.3488
+        },
+        {
+            "close": 1.3651,
+            "color": "Cyan",
+            "date": "Aug 18, 26",
+            "high": 1.3676,
+            "index": 47,
+            "low": 1.3519,
+            "open": 1.3552
+        },
+        {
+            "close": 1.353,
+            "color": "Purple",
+            "date": "Aug 25, 26",
+            "high": 1.3656,
+            "index": 48,
+            "low": 1.3526,
+            "open": 1.3635
+        },
+        {
+            "close": 1.3514,
+            "color": "Purple",
+            "date": "Sep 01, 26",
+            "high": 1.3566,
+            "index": 49,
+            "low": 1.3475,
+            "open": 1.3534
+        },
+        {
+            "close": 1.3525,
+            "color": "Cyan",
+            "date": "Sep 08, 26",
+            "high": 1.3568,
+            "index": 50,
+            "low": 1.3451,
+            "open": 1.352
+        },
+        {
+            "close": 1.3392,
+            "color": "Purple",
+            "date": "Sep 15, 26",
+            "high": 1.3528,
+            "index": 51,
+            "low": 1.3345,
+            "open": 1.3528
+        },
+        {
+            "close": 1.3251,
+            "color": "Purple",
+            "date": "Sep 22, 26",
+            "high": 1.3396,
+            "index": 52,
+            "low": 1.3213,
+            "open": 1.3395
+        }
+    ]
+}

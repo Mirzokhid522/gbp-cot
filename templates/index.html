@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Bulls - COT Data Dashboard</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ApexCharts CDN for candlestick chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#000000',
+                        cardbg: '#000000',
+                        cyanaccent: '#09B2E7',
+                        purpleaccent: '#894BA9'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkbg text-gray-200 min-h-screen font-sans p-6">
+
+    <div class="max-w-6xl mx-auto space-y-6">
+        <!-- Header -->
+        <header class="flex justify-between items-center border-b border-gray-900 pb-4">
+            <h1 class="text-2xl font-bold tracking-wider text-cyanaccent">MARKET BULLS <span class="text-gray-500 text-sm font-normal">| COT Dashboard</span></h1>
+            <div id="currency-selector" class="flex gap-2">
+                <button onclick="loadData('GBP')" class="px-4 py-2 bg-cyanaccent text-darkbg font-semibold rounded shadow transition hover:opacity-90">GBP</button>
+            </div>
+        </header>
+
+        <!-- Chart Container Card -->
+        <div class="bg-cardbg rounded-xl p-6 shadow-xl border border-gray-900">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="chart-title" class="text-lg font-semibold text-gray-300">GBP Price Chart</h2>
+            </div>
+            <div id="candlestick-chart" class="w-full"></div>
+        </div>
+
+        <!-- Main Content Card (Table) -->
+        <div class="bg-cardbg rounded-xl p-6 shadow-xl border border-gray-900">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="table-title" class="text-lg font-semibold text-gray-300">GBP Candlestick & COT Records</h2>
+                <span id="row-count" class="text-xs bg-gray-900 px-3 py-1 rounded-full text-gray-400 border border-gray-800">Loading rows...</span>
+            </div>
+
+            <!-- Table Container -->
+            <div class="overflow-x-auto max-h-[400px] rounded-lg border border-gray-900">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-black sticky top-0 text-gray-400 uppercase text-xs tracking-wider border-b border-gray-900">
+                        <tr>
+                            <th class="p-3">#</th>
+                            <th class="p-3">Date</th>
+                            <th class="p-3">Open</th>
+                            <th class="p-3">High</th>
+                            <th class="p-3">Low</th>
+                            <th class="p-3">Close</th>
+                            <th class="p-3">Trend Color</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cot-table-body" class="divide-y divide-gray-900 text-sm">
+                        <!-- Data rows injected via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let chart = null;
+
+        async function loadData(currency) {
+            document.getElementById('table-title').innerText = `${currency} Candlestick & COT Records`;
+            document.getElementById('chart-title').innerText = `${currency} Price Chart`;
+            const tableBody = document.getElementById('cot-table-body');
+            tableBody.innerHTML = `<tr><td colspan="7" class="text-center p-6 text-gray-600">Loading data for ${currency}...</td></tr>`;
+
+            try {
+                const response = await fetch(`/api/cot-data?currency=${currency}`);
+                const result = await response.json();
+
+                if (result.status === 'success' && result.data.length > 0) {
+                    tableBody.innerHTML = '';
+                    document.getElementById('row-count').innerText = `${result.data.length} Records Loaded`;
+
+                    let chartData = [];
+
+                    result.data.forEach((row) => {
+                        const colorBadge = row.color === 'Cyan' 
+                            ? `<span class="px-2 py-1 rounded text-xs font-bold bg-[#09B2E7]/10 text-cyanaccent border border-[#09B2E7]/20">Cyan (Bullish)</span>`
+                            : `<span class="px-2 py-1 rounded text-xs font-bold bg-[#894BA9]/10 text-purple-400 border border-[#894BA9]/20">Purple (Bearish)</span>`;
+
+                        const tr = document.createElement('tr');
+                        tr.className = 'hover:bg-gray-900/40 transition';
+                        tr.innerHTML = `
+                            <td class="p-3 text-gray-600">${row.index}</td>
+                            <td class="p-3 font-medium text-gray-300">${row.date}</td>
+                            <td class="p-3 font-mono text-gray-400">${row.open}</td>
+                            <td class="p-3 font-mono text-emerald-400">${row.high}</td>
+                            <td class="p-3 font-mono text-rose-400">${row.low}</td>
+                            <td class="p-3 font-mono text-gray-400">${row.close}</td>
+                            <td class="p-3">${colorBadge}</td>
+                        `;
+                        tableBody.appendChild(tr);
+
+                        chartData.push({
+                            x: new Date(row.date),
+                            y: [row.open, row.high, row.low, row.close]
+                        });
+                    });
+
+                    renderChart(chartData);
+
+                } else {
+                    tableBody.innerHTML = `<tr><td colspan="7" class="text-center p-6 text-rose-400">No data available for ${currency}. Run harvester script.</td></tr>`;
+                    document.getElementById('row-count').innerText = `0 Records`;
+                }
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                tableBody.innerHTML = `<tr><td colspan="7" class="text-center p-6 text-rose-400">Failed to connect to backend server.</td></tr>`;
+            }
+        }
+
+        function renderChart(data) {
+            const chartOptions = {
+                chart: {
+                    type: 'candlestick',
+                    height: 350,
+                    background: '#000000',
+                    toolbar: { show: false }
+                },
+                series: [{
+                    data: data
+                }],
+                theme: {
+                    mode: 'dark'
+                },
+                plotOptions: {
+                    candlestick: {
+                        colors: {
+                            upward: '#09B2E7',   
+                            downward: '#894BA9'  
+                        }
+                    }
+                },
+                xaxis: {
+                    type: 'datetime',
+                    labels: { style: { colors: '#6b7280' } },
+                    axisBorder: { color: '#111827' },
+                    axisTicks: { color: '#111827' }
+                },
+                yaxis: {
+                    tooltip: { enabled: true },
+                    labels: { style: { colors: '#6b7280' } }
+                },
+                grid: {
+                    borderColor: '#111827'
+                }
+            };
+
+            if (chart) {
+                chart.destroy();
+            }
+            chart = new ApexCharts(document.querySelector("#candlestick-chart"), chartOptions);
+            chart.render();
+        }
+
+        loadData('GBP');
+    </script>
+</body>
+</html>
